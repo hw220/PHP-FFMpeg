@@ -93,7 +93,7 @@ class PadFilter implements VideoFilterInterface, ComplexCompatibleFilter
         $commands[] = 'scale=iw*min('.$this->dimension->getWidth().'/iw\,'.$this->dimension->getHeight()
             .'/ih):ih*min('.$this->dimension->getWidth().'/iw\,'.$this->dimension->getHeight().'/ih),pad='
             .$this->dimension->getWidth().':'.$this->dimension->getHeight().':('.$this->dimension->getWidth()
-            .'-iw)/2:('.$this->dimension->getHeight().'-ih)/2';
+            .'-iw)/2:('.$this->dimension->getHeight().'-ih)/2:white';
 
         return $commands;
     }
